@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>歪歪漫画网-最新漫画,热门漫画大全,免费在线看漫画的网站</title>
+<meta content="歪歪漫画是一个免费在线漫画阅读平台,汇聚海量精选禁漫免费在线阅读,最新无遮挡韩漫漫画阅读网站,正版日韩漫画资源,提供高品质在线观看体验,日漫美漫国漫全覆盖,热门连载实时更新。" name="description"/>
+<meta content="歪歪漫画,歪歪漫画官网,歪歪漫画app下载,日漫,日本漫画，韩漫,韩国漫画,好看的漫画,漫画网站,漫画大全" name="keywords"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Microsoft YaHei","PingFang SC","Hiragino Sans GB",Arial,sans-serif;color:#2c3038;background:#f5f6f8;line-height:1.75;font-size:15px}
+a{color:#ff6a00;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header.site-header{background:#fff;border-bottom:1px solid #e6e8eb;position:sticky;top:0;z-index:20;box-shadow:0 1px 6px rgba(0,0,0,.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 0}
+.logo{font-size:22px;font-weight:700;color:#ff6a00;letter-spacing:1px}
+.logo span{color:#2c3038;font-size:13px;font-weight:400;margin-left:8px;letter-spacing:0}
+nav.main-nav ul{display:flex;flex-wrap:wrap;gap:6px;list-style:none}
+nav.main-nav a{display:block;padding:6px 12px;border-radius:16px;background:#f2f3f5;color:#4a5058;font-size:14px}
+nav.main-nav a:hover,nav.main-nav a.active{background:#ff6a00;color:#fff;text-decoration:none}
+.hero{background:linear-gradient(135deg,#ff8a3c,#ff5f00);color:#fff;padding:40px 0 36px;margin-bottom:26px}
+.hero h1{font-size:30px;line-height:1.4;font-weight:700;margin-bottom:12px}
+.hero p{font-size:15px;opacity:.95;max-width:820px}
+.hero .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.hero .tags a{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:14px;padding:4px 12px;font-size:13px}
+.hero .tags a:hover{background:#fff;color:#ff6a00;text-decoration:none}
+main{display:block;padding-bottom:40px}
+.block{background:#fff;border-radius:10px;padding:22px 22px 8px;margin-bottom:22px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.block h2{font-size:20px;font-weight:700;color:#2c3038;padding-left:12px;border-left:4px solid #ff6a00;margin-bottom:16px}
+.block h3{font-size:16px;font-weight:700;color:#3a4048;margin:16px 0 8px}
+.block p{color:#5a6068;margin-bottom:12px}
+.comic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:16px;margin-bottom:20px}
+.comic-card{border:1px solid #eef0f2;border-radius:8px;overflow:hidden;background:#fff;transition:box-shadow .2s,transform .2s}
+.comic-card:hover{box-shadow:0 6px 18px rgba(0,0,0,.1);transform:translateY(-2px)}
+.comic-cover{height:150px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#fff;text-align:center;padding:8px;background:linear-gradient(135deg,#8ea2ff,#5f6fe8)}
+.comic-card:nth-child(4n+2) .comic-cover{background:linear-gradient(135deg,#ffb26b,#f08a24)}
+.comic-card:nth-child(4n+3) .comic-cover{background:linear-gradient(135deg,#7ed7b1,#31a97c)}
+.comic-card:nth-child(4n+4) .comic-cover{background:linear-gradient(135deg,#f79fb4,#e05b80)}
+.comic-meta{padding:9px 10px}
+.comic-meta .name{font-size:14px;font-weight:700;color:#2c3038;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.comic-meta .info{font-size:12px;color:#939aa3;margin-top:4px;display:flex;justify-content:space-between;gap:6px}
+.update-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px 26px;margin-bottom:16px}
+.update-list li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed #eceef0;font-size:14px}
+.update-list li a{color:#3a4048}
+.update-list li a:hover{color:#ff6a00}
+.update-list li span{color:#939aa3;font-size:13px;white-space:nowrap}
+.cat-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:16px}
+.cat-list a{display:block;padding:10px 14px;background:#f7f8fa;border:1px solid #eceef0;border-radius:8px;font-size:14px;color:#4a5058}
+.cat-list a:hover{background:#fff3ea;border-color:#ffc79a;color:#ff6a00;text-decoration:none}
+.cat-list a em{font-style:normal;color:#939aa3;font-size:12px;margin-left:6px}
+.faq-item{border-bottom:1px solid #f0f1f3;padding:12px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-item h3{margin:0 0 6px;font-size:15px}
+.faq-item p{margin:0;font-size:14px;color:#606670}
+footer.site-footer{background:#2c3038;color:#a8aeb8;padding:28px 0;font-size:13px;text-align:center}
+footer.site-footer a{color:#d3d7dd}
+footer.site-footer .foot-links{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:12px}
+@media (max-width:640px){
+.hero h1{font-size:23px}
+.hero{padding:28px 0 24px}
+.comic-grid{grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:12px}
+.comic-cover{height:124px;font-size:14px}
+.block{padding:16px 14px 4px}
+.update-list{grid-template-columns:1fr}
+}
+</style>
+<script src="https://cdn.staticsave.com/binglangwang/lidabao442.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="logo">歪歪漫画<span>免费在线看漫画</span></div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a class="active" href="#hot">热门漫画</a></li>
+        <li><a href="#category">漫画分类</a></li>
+        <li><a href="#update">最新更新</a></li>
+        <li><a href="#ranking">人气排行</a></li>
+        <li><a href="#about">关于本站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>歪歪漫画网 - 最新热门漫画免费在线阅读平台</h1>
+      <p>歪歪漫画是面向漫迷打造的高品质漫画阅读网站，收录日漫、韩漫、国漫、美漫等全品类漫画资源，涵盖热血、恋爱、悬疑、奇幻、校园、职场等主流题材。站内连载实时更新，支持手机、平板、电脑多端在线阅读，无需下载即可流畅翻页，为漫画爱好者提供清爽、舒适的追更体验。</p>
+      <div class="tags">
+        <a href="#category">日漫</a>
+        <a href="#category">韩漫</a>
+        <a href="#category">国漫</a>
+        <a href="#category">美漫</a>
+        <a href="#category">热血</a>
+        <a href="#category">恋爱</a>
+        <a href="#category">悬疑</a>
+        <a href="#category">奇幻</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <section class="block" id="hot">
+      <h2>热门漫画推荐</h2>
+      <p>以下为近期在歪歪漫画站内阅读量与收藏量持续走高的热门作品，题材覆盖热血战斗、都市恋爱、悬疑推理与异世界冒险，可根据个人口味自由挑选。每部作品均已更新至最新章节，点击封面即可进入漫画详情页查看目录与评论区。</p>
+      <div class="comic-grid">
+        <article class="comic-card">
+          <div class="comic-cover">热血战纪</div>
+          <div class="comic-meta">
+            <span class="name">热血战纪</span>
+            <div class="info"><span>热血 / 冒险</span><span>连载中</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">星海幻想</div>
+          <div class="comic-meta">
+            <span class="name">星海幻想</span>
+            <div class="info"><span>奇幻 / 科幻</span><span>连载中</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">心动信号</div>
+          <div class="comic-meta">
+            <span class="name">心动信号</span>
+            <div class="info"><span>恋爱 / 校园</span><span>连载中</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">迷雾侦探</div>
+          <div class="comic-meta">
+            <span class="name">迷雾侦探</span>
+            <div class="info"><span>悬疑 / 推理</span><span>已完结</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">剑起长安</div>
+          <div class="comic-meta">
+            <span class="name">剑起长安</span>
+            <div class="info"><span>国漫 / 武侠</span><span>连载中</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">异界旅人</div>
+          <div class="comic-meta">
+            <span class="name">异界旅人</span>
+            <div class="info"><span>韩漫 / 穿越</span><span>连载中</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">都市第一课</div>
+          <div class="comic-meta">
+            <span class="name">都市第一课</span>
+            <div class="info"><span>都市 / 职场</span><span>连载中</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">机甲黎明</div>
+          <div class="comic-meta">
+            <span class="name">机甲黎明</span>
+            <div class="info"><span>日漫 / 机战</span><span>连载中</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">学院怪谈录</div>
+          <div class="comic-meta">
+            <span class="name">学院怪谈录</span>
+            <div class="info"><span>悬疑 / 校园</span><span>连载中</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">恋爱第二季</div>
+          <div class="comic-meta">
+            <span class="name">恋爱第二季</span>
+            <div class="info"><span>恋爱 / 治愈</span><span>连载中</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">神树之子</div>
+          <div class="comic-meta">
+            <span class="name">神树之子</span>
+            <div class="info"><span>奇幻 / 冒险</span><span>连载中</span></div>
+          </div>
+        </article>
+        <article class="comic-card">
+          <div class="comic-cover">英雄档案</div>
+          <div class="comic-meta">
+            <span class="name">英雄档案</span>
+            <div class="info"><span>美漫 / 超级英雄</span><span>连载中</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="category">
+      <h2>漫画分类导航</h2>
+      <p>歪歪漫画按地域来源与题材类型对作品做了细致分类，方便漫迷快速定位想看的内容。无论是偏爱日本漫画细腻的叙事节奏，还是喜欢韩国漫画鲜明的画风与强情节推进，亦或支持国产漫画的原创力量，都能在对应分类下找到合适选择。</p>
+      <h3>按来源分类</h3>
+      <ul class="cat-list">
+        <li><a href="#hot">日本漫画<em>日漫</em></a></li>
+        <li><a href="#hot">韩国漫画<em>韩漫</em></a></li>
+        <li><a href="#hot">国产漫画<em>国漫</em></a></li>
+        <li><a href="#hot">美国漫画<em>美漫</em></a></li>
+      </ul>
+      <h3>按题材分类</h3>
+      <ul class="cat-list">
+        <li><a href="#hot">热门连载<em>实时更新</em></a></li>
+        <li><a href="#hot">热血战斗<em>高燃</em></a></li>
+        <li><a href="#hot">恋爱甜宠<em>治愈</em></a></li>
+        <li><a href="#hot">悬疑推理<em>烧脑</em></a></li>
+        <li><a href="#hot">奇幻冒险<em>异世界</em></a></li>
+        <li><a href="#hot">校园日常<em>青春</em></a></li>
+        <li><a href="#hot">都市职场<em>现实</em></a></li>
+        <li><a href="#hot">科幻机甲<em>未来</em></a></li>
+        <li><a href="#hot">武侠仙侠<em>东方</em></a></li>
+        <li><a href="#hot">恐怖惊悚<em>胆量挑战</em></a></li>
+        <li><a href="#hot">搞笑轻松<em>解压</em></a></li>
+        <li><a href="#hot">已完结精选<em>一口气看完</em></a></li>
+      </ul>
+    </section>
+
+    <section class="block" id="update">
+      <h2>最新更新列表</h2>
+      <p>歪歪漫画保持高频更新节奏，热门漫画连载基本与官方同步，每日固定时段推送新章节。以下为近期更新的作品与章节信息，追更用户可直接进入对应作品页面继续阅读。</p>
+      <ul class="update-list">
+        <li><a href="#hot">热血战纪</a><span>第 128 话 · 今日更新</span></li>
+        <li><a href="#hot">星海幻想</a><span>第 96 话 · 今日更新</span></li>
+        <li><a href="#hot">心动信号</a><span>第 74 话 · 今日更新</span></li>
+        <li><a href="#hot">剑起长安</a><span>第 210 话 · 今日更新</span></li>
+        <li><a href="#hot">异界旅人</a><span>第 155 话 · 昨日更新</span></li>
+        <li><a href="#hot">都市第一课</a><span>第 63 话 · 昨日更新</span></li>
+        <li><a href="#hot">机甲黎明</a><span>第 88 话 · 昨日更新</span></li>
+        <li><a href="#hot">学院怪谈录</a><span>第 47 话 · 昨日更新</span></li>
+        <li><a href="#hot">恋爱第二季</a><span>第 39 话 · 两日内更新</span></li>
+        <li><a href="#hot">神树之子</a><span>第 102 话 · 两日内更新</span></li>
+        <li><a href="#hot">英雄档案</a><span>第 56 话 · 三日内更新</span></li>
+        <li><a href="#hot">迷雾侦探</a><span>全 120 话 · 已完结</span></li>
+      </ul>
+    </section>
+
+    <section class="block" id="ranking">
+      <h2>人气排行与阅读指南</h2>
+      <h3>人气榜单说明</h3>
+      <p>歪歪漫画的人气榜按周更新，统计维度包含阅读人次、收藏数量、评论互动与追更留存率，能够较客观地反映作品的实际受欢迎程度。新人读者如果不确定从哪部作品开始，建议优先浏览榜单前十名，通常能较快找到符合自己口味的类型。榜单同时区分连载榜与完结榜，方便偏好一次性读完的读者挑选。</p>
+      <h3>在线阅读体验</h3>
+      <p>站点采用长条滚动阅读模式，图片按需加载，网络条件一般时也能保持较为流畅的翻页体验。阅读界面支持亮度调节、单页与连续模式切换、阅读进度自动记忆，下次进入作品会直接从上次位置继续。页面适配移动端屏幕宽度，横屏竖屏均可正常显示。</p>
+      <h3>章节与目录结构</h3>
+      <p>每部作品的详情页包含作品简介、作者信息、题材标签、更新状态与完整章节目录。目录按卷次与话数排列，支持倒序查看，最新更新的章节置顶展示，便于追更读者第一时间找到新增内容。</p>
+    </section>
+
+    <section class="block" id="about">
+      <h2>关于歪歪漫画</h2>
+      <p>歪歪漫画是一个专注漫画在线阅读的内容平台，坚持更新及时、分类清晰、阅读清爽的产品思路，努力为漫画爱好者提供稳定可靠的追更环境。站点内容以正版日韩漫画资源为核心，同时引入优质国漫与美漫作品，力求覆盖不同阅读偏好。</p>
+      <h3>内容更新机制</h3>
+      <p>站内作品由编辑团队按题材与热度进行筛选整理，热门连载保持每日或多日一更，节假日期间也会尽量保证更新不断档。出现章节缺失或图片加载异常时，用户可通过页面反馈入口提交问题，编辑会在核实后尽快修复。</p>
+      <h3>多端使用方式</h3>
+      <p>歪歪漫画支持浏览器直接访问，无需安装任何插件即可阅读。手机端可将站点添加到桌面作为快捷入口，使用体验接近应用。如使用歪歪漫画 app 客户端，还可获得离线缓存与更新提醒等功能。</p>
+      <h3>常见问题</h3>
+      <div class="faq-item">
+        <h3>歪歪漫画需要注册才能看漫画吗？</h3>
+        <p>浏览与阅读主体内容无需注册，注册账号主要用于收藏作品、同步阅读进度与参与评论互动。</p>
+      </div>
+      <div class="faq-item">
+        <h3>漫画章节多久更新一次？</h3>
+        <p>热门连载一般为每日更新或隔日更新，具体节奏以各作品详情页的更新说明为准，完结作品不再更新。</p>
+      </div>
+      <div class="faq-item">
+        <h3>可以在手机上阅读吗？</h3>
+        <p>可以，站点已做响应式适配，手机浏览器直接打开即可阅读，也可将页面添加到桌面便于下次进入。</p>
+      </div>
+      <div class="faq-item">
+        <h3>如何找到自己想看的漫画类型？</h3>
+        <p>通过顶部导航的分类入口，或使用站内搜索输入作品名、作者名与题材关键词进行定位。</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-links">
+      <a href="#hot">热门漫画</a>
+      <a href="#category">漫画分类</a>
+      <a href="#update">最新更新</a>
+      <a href="#ranking">人气排行</a>
+      <a href="#about">关于本站</a>
+    </div>
+    <p>歪歪漫画网 - 最新漫画,热门漫画大全,免费在线看漫画的网站</p>
+    <p>本站内容均来自互联网公开信息整理，仅供漫画爱好者交流学习使用。</p>
+  </div>
+</footer>
+
+</body>
+</html>
